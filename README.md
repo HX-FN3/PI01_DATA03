@@ -31,6 +31,7 @@ Una vez normalizado el dataset y entendiendo la problemática final, deberán de
 - Leer la documentación oficial de FastAPI.
 - Comparar con diferentes consultas los resultados obtenidos y los deseados.
 - Si vas a usar Heroku, procura implementarlo desde el inicio del armado de tu script.
+- SUPERTIP: Es el mejor momento para que comiencen a trabajar/familiarizarse con el uso de Github en sus proyectos!
 
 ### Repasemos conceptos. ¿Que es una API?  
 Se llama Application Programming interface o, por su traducción, Interfaz de Programación de Aplicaciones al conjunto de subrutinas, funciones y procedimientos que ofrece cierta biblioteca para ser utilizada por otro software como una capa de abstracción.  
