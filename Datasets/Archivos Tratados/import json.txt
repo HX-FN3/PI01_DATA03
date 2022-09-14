@@ -1,0 +1,48 @@
+fh = open('constructors.txt')
+for line in fh:
+    line = line.rstrip()
+    line += ',\n'
+    with open("constructors2.json", "a",encoding='UTF-8') as f:
+        f.write(line)
+
+fh = open('drivers.txt',encoding='UTF-8')
+for line in fh:
+    line = line.rstrip()
+    line += ',\n'
+    with open("drivers2.txt", "a",encoding='UTF-8') as f:
+        f.write(line)
+
+fh = open('results.txt')
+for line in fh:
+    line = line.rstrip()
+    line += ',\n'
+    with open("results2.txt", "a") as f:
+        f.write(line)
+
+import json
+import pandas as pd
+
+with open('constructors2.json',encoding='UTF-8') as reader:
+    constructors = json.load(reader)
+df = pd.DataFrame(constructors)
+df.set_index(df.constructorId,inplace=True)
+df.drop(columns=['constructorId'],inplace=True)
+df.head(8)
+
+with open('drivers2.json',encoding='UTF-8') as reader:
+    drivers = json.load(reader)
+df = pd.DataFrame(drivers)
+df.set_index(df.driverId,inplace=True)
+df.drop(columns=['driverId'],inplace=True)
+df.head(8)
+
+with open('results2.json',encoding='UTF-8') as reader:
+    results = json.load(reader)
+df = pd.DataFrame(results)
+df.set_index(df.resultId,inplace=True)
+df.drop(columns=['resultId'],inplace=True)
+df.head(8)
+
+texto = "Hola"
+texto = ","+texto
+texto
